@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+  <style>
+    * {
+      margin: 0px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      transition: all linear 0.4s;
+      padding: 10px 40px 10px 40px;
+      height: 2rem;
+      background-color: black;
+      color: white;
+    }
+
+    .nav1 {
+      display: flex;
+      justify-content: space-between;
+      transition: all linear 0.4s;
+      padding: 10px 40px 10px 40px;
+      height: 16rem;
+
+      background-color: #0093e9;
+      background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
+      color: white;
+    }
+
+    .link {
+      opacity: 0;
+    }
+
+    .link1 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 1.5rem;
+      list-style-type: none;
+      position: absolute;
+      left: 2.5rem;
+      top: 5rem;
+      opacity: 100%;
+      transition: all linear 0.5s;
+    }
+
+    .menu1 {
+      height: 3px;
+      width: 1.5rem;
+      background-color: white;
+      transition: all linear 0.5s;
+    }
+
+    .menu2 {
+      height: 3px;
+      width: 1.5rem;
+      background-color: white;
+      transition: all linear 0.5s;
+    }
+
+    .menu3 {
+      height: 3px;
+      width: 1.5rem;
+      background-color: white;
+      transition: all linear 0.5s;
+    }
+
+    .menu {
+      height: 3px;
+      width: 1.5rem;
+      background-color: white;
+    }
+
+    .menu-1 {
+      transform: rotate(45deg);
+      transition: all linear 0.5s;
+      position: absolute;
+      top: 1.5rem;
+    }
+
+    .menu-3 {
+      transition: all linear 0.5s;
+      transform: rotate(-45deg);
+      top: 1.5rem;
+      position: absolute;
+    }
+
+    .menu-2 {
+      opacity: 0;
+      transition: all linear 0.5s;
+    }
+
+    .menu-box {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-radius: 1rem;
+      cursor: pointer;
+      align-content: center;
+      padding: 5px 10px;
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    .back-vdo {
+      position: absolute;
+      z-index: -1;
+      bottom: 0px;
+      right: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="logo">Logo</div>
+    <div class="link">
+      <li>Home</li>
+      <li>Servies</li>
+      <li>About us</li>
+      <li>Help</li>
+    </div>
+    <div class="">
+      <div class="menu-box">
+        <div class="menu1"></div>
+        <div class="menu2"></div>
+        <div class="menu3"></div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    let menu = document
+      .querySelector(".menu-box")
+      .addEventListener("click", function () {
+        let nav = document.querySelector(".nav");
+        let link = document.querySelector(".link");
+        link.classList.toggle("link1");
+        nav.classList.toggle("nav1");
+        let menu1 = document.querySelector(".menu1");
+        menu1.classList.toggle("menu-1");
+        let menu2 = document.querySelector(".menu2");
+        menu2.classList.toggle("menu-2");
+        let menu3 = document.querySelector(".menu3");
+        menu3.classList.toggle("menu-3");
+      });
+  </script>
+</body>
+
+</html>
